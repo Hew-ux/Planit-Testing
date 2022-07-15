@@ -1,0 +1,55 @@
+<!-- Declares what type of document this is. -->
+<!doctype html>
+
+<!-- The first branch from literal text interpretation. All your code/print functions go in here. -->
+<html>
+
+<!-- Code that runs continuously while the page is open. Contains page metadata. -->
+<head>
+    <meta charset="utf-8">
+    <title>ASCII art plotter</title>
+	<!-- Defines formatting for future tags. #eElementId will only apply to those elements. The html comment commands will hide these css commands from browsers that don't support them. -->
+	<style>
+	<!--
+	/* You could also use the <tt>text</tt> format to use a monospace font. */
+	body{
+		font-family:monospace;
+	}
+	-->
+	</style>
+</head>
+
+<!-- Code that runs once upon loading the page. Style contains the <body> formatting. -->
+<body>
+	
+	<!-- Error message for if the browser has Javascript disabled. -->
+	<noscript>
+		You don't have Javascript enabled!
+	</noscript>
+	
+	<!-- All your printed text in the page. The reason this comes before the scripts is because the scripts will retroactively change this as they run. -->
+	<!-- Call the id containing the var created by the earlier script and identify it as a header tier 2. -->
+	<!-- <span> is a text-neutral element that can be used to call give spefic ids to inline element or alternative styles. In this case, we're using it to define the empty space following "Good " with the "greeting" id to later be edited by our script. -->
+	<h2>ASCII plotter</h2>
+	<!-- <h2>Good <span id="greeting"></span><span id="dateandtime"></span></h2> -->
+	<p style = "font-family:times; color:red; font-style:italic;">Provided two points in the (x,y) (x,y) where x and y are numbers, this will plot them out on a graph and draw a line to connect them in ASCII art.</p>
+	
+	<!-- Calling in static library functions, giving meaning to the following Javascript inside of future <script>s. -->
+	<script src="ascii.plotter.js"></script>
+	
+	<!-- The actual script. Having this before the printed text will prevent the page from loading until this script has finished loading. Additionally, enclosing the script with html comment commands will prevent it from being displayed in non-javascript environments. -->
+    <script>
+	<!--
+    // This comment opener is done to save the page from failing if the browser doesn't support Javascript.
+
+	var point1 = [1,1];
+	var point2 = [11,7];
+	document.write(Asciiplot(point1[0],point1[1],point2[0],point2[1]));
+	
+	// The html closing comment command needs to be commented out in javascript so it is not literally interpreted by javascript. There is an exception for html opening comment commands at the start of the script however.
+	//-->
+    </script>
+
+<!-- Closing off the body and ending the html document. -->
+</body>
+</html>

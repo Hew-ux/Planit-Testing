@@ -1,0 +1,10 @@
+1. Compatibility on both desktop clients and mobile clients.
+2. Compatibility across multiple browsers (mainly Chrome and Firefox, as most are derivatives of those).
+3. Updating of inventory in stock (don't want users ordering items that are currently out of stock, instead redirect them to entering the queue).
+4. Account creation.
+5. Account signing in/signing out.
+6. Cart persistence (does refreshing the page nuke it, does playing around with the browser's back/forward buttons break it, etc.).
+7. Emptying the cart properly deletes all items from the cart.
+8. Payment process (for all available payment methods).
+9. Contact form functions correctly.
+10. Successful receipt delivery/appropriate error message if payment fails.
