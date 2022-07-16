@@ -4,4 +4,4 @@ To change the arbitrary points, open "open me.html" in your preferred text edito
 	var point2 = [11,7];
 to be whatever number you want within the range.
 The default range is 1-20, and can be altered in the "ascii.plotter.js" file.
-This is the roughest one as I ran out of time. Originally wanted this to be an interactive page. Still fufills the task though.
+This is the roughest one as it was made as an extra.
